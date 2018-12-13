@@ -8,8 +8,8 @@ variables with arrays and loop to give them values,
 increment their positions, and draw their corresponding 
 ellipses.
 */
-float xPos = width/2;
-float yPos = height /2;
+//float xPos = width/2;
+//float yPos = height /2;
 float[][] randomWalkers = new float[xPos][yPos];
 
 

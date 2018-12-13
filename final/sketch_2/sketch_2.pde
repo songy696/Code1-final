@@ -37,12 +37,13 @@ class Rotater {
   }
 
   void display() {
-    //pushMatrix();
+    pushMatrix();
     rectMode(CENTER);
     translate(x, y);
     //popMatrix();
     rotate(radians(angle));
     rect(0, 0, 100, 100);
+    popMatrix();
   }
 
   void update() {

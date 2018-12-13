@@ -14,10 +14,12 @@ void setup() {
 }
 
 void draw() {
-  float x = random(dist(width/2, height/2, 300, 300));
-  float y = random(dist(width/2, height/2, 300, 300), 0);
+  float x = random(0,width);
+  float y = random(0,height);
   //float x = random(width/2 - 150, width/2 +150);
   //float y = random(height/2 - 150, height/2 +150);
+  if(dist(width/2, height/2, x, y)<150){
   stroke(255);
   point(x, y);
+  }
 }

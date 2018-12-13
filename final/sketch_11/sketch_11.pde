@@ -15,7 +15,7 @@ int columns = 10;
 float w, h;
 float[][] posX = new float[rows][columns];
 float[][] posY = new float[rows][columns];
-float[][] color = new float[rows][columns];
+float[][] color1 = new float[rows][columns];
 
 void setup() {
   size(600, 600);
@@ -25,7 +25,15 @@ void setup() {
     for(int c = 0; c < posX[0].length; c++){
       posX[r][c] = c * w;
       posY[r][c] = r * h;
-      //color[r][c] = 
+      color1[r][c] = 255;
+      
+      if(posX[r][c] < 300 && posY[r][c]<300){
+        color1[r][c] = color(255,0,0);
+      }
+      
+      if(posX[r][c] > 300 && posY[r][c]>300){
+        color1[r][c] = color(255,0,0);
+      }
     }
   }
 }
@@ -34,7 +42,10 @@ void draw() {
   for(int r = 0; r < posX.length; r++){
     for(int c = 0; c < posX[0].length; c++){
       rect(posX[r][c], posY[r][c], w, h);
-      fill(255,0,0);
+      fill(color1[r][c],0,0);
+      
+      
+      
     }
   }
   
