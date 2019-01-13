@@ -41,7 +41,7 @@ void draw() {
       float h = height/gridH;
       float xPos = i * width/gridW + w/2;
       float yPos = j * height/gridH + h/2;
-      c = sizes[i][j]++;
+      //c = sizes[i][j]++;
 
       ellipse(xPos, yPos, sizes[i][j], sizes[i][j]);
     }

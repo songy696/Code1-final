@@ -13,8 +13,8 @@ the top of the canvas to the bottom.
 
 float angle = 0.0;
 float offset;
-float amplitude = 100;
-float speed = 8;
+float amplitude = width;
+float speed = 0.1;
 
 
 void setup() {
@@ -31,9 +31,9 @@ void draw() {
  //float y3 = offset + sin(angle + 0.8) * amplitude;
  
  for (int i = 0; i <= width; i += 30){
-    //float y1 = offset + sin(angle) * amplitude;
-    float y = map(sin(angle), -1,1,0,height);
-    ellipse(i , y, 20, 20);
+    float y1 = offset + sin(angle) * amplitude;
+    //float y = map(sin(angle), -1,1,0,height);
+    ellipse(i , y1, 20, 20);
     angle += 0.1;
  }
 
